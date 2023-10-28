@@ -35,6 +35,5 @@ export interface IItemDrawerProps {
   children: React.ReactNode;
 }
 
-// export type MenuSectionType = "time" | "language" | "display" | "notification";
+export type MenuSectionType = "time" | "language" | "display" | "notification";
 
-export type MenuSectionType = "time" | "language" | "display";

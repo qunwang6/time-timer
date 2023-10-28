@@ -130,18 +130,7 @@ export default function MainMenuContent({
           }}
         />
       </ItemDrawer>
-      <ItemDrawer content={language === "kor" ? "알림" : "Notification"}>
-        <SelectableItem
-          content={
-            language === "kor" ? "알람 소리 미리 듣기" : "Preview alarm sound"
-          }
-          onClick={() => {
-            closeMenu();
-            setPreviewSoundModalActive(true);
-          }}
-        />
 
-      </ItemDrawer>
 
       <div style={{ margin: "24px 0" }} />
       <OpenLinkItem content="Time Timer" href="https://www.timetimer.com" />
