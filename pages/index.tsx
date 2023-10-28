@@ -31,10 +31,7 @@ export default function Home() {
 
   return (
     <>
-      <Seo
-        title="Time Timer | 타임 타이머"
-        description="60분 온라인 타이머를 사용해서 최고의 집중을 만들어보세요."
-      />
+
       <Container>
         <Header />
         <Main>

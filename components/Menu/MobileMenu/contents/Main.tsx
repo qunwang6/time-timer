@@ -132,13 +132,5 @@ export default function MainMenuContent({
       </ItemDrawer>
 
 
-      <div style={{ margin: "24px 0" }} />
-      <OpenLinkItem content="Time Timer" href="https://www.timetimer.com" />
-      <OpenLinkItem
-        icon={<BsGithub />}
-        content="Github"
-        href="https://github.com/fecapark/time-timer"
-      />
-    </div>
   );
 }
