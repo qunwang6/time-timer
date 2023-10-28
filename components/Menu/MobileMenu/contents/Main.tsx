@@ -140,17 +140,7 @@ export default function MainMenuContent({
             setPreviewSoundModalActive(true);
           }}
         />
-        <SelectableItem
-          content={
-            language === "kor"
-              ? "백그라운드 푸쉬 알림 지원"
-              : "About push notification"
-          }
-          onClick={() => {
-            closeMenu();
-            setSupportModalActive(true);
-          }}
-        />
+
       </ItemDrawer>
 
       <div style={{ margin: "24px 0" }} />

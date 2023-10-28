@@ -70,6 +70,15 @@ export default function NotificationSwitch() {
   }, [isTimingNow, isEmptyClockDegree]);
 
   return (
-
+    <OptionSwitch
+      text={
+        language === "kor"
+          ? "종료시 푸쉬 알림 켜기"
+          : "Activate push notification"
+      }
+      isActive={isSendPushOn}
+      onSwitchOn={onSendPushOn}
+      onSwitchOff={onSendPushOff}
+    />
   );
 }
