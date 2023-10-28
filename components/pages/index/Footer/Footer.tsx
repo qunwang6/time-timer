@@ -65,10 +65,7 @@ export default function Footer() {
               onClick={onTimerStartClick}
             />
           ) : (
-            <span>
-              Copyright &copy; {new Date().getFullYear()} Sanghyeok Park. All
-              rights reserved.
-            </span>
+ 
           )
         ) : null}
       </Container>
