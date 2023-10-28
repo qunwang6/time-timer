@@ -132,5 +132,8 @@ export default function MainMenuContent({
       </ItemDrawer>
 
 
+      <div style={{ margin: "24px 0" }} />
+
+    </div>
   );
 }
