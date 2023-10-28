@@ -34,16 +34,7 @@ export default function NotificationSectionContent() {
           setPreviewSoundModalActive(true);
         }}
       />
-      <SelectableItem
-        content={
-          language === "kor"
-            ? "백그라운드 푸쉬 알림 지원"
-            : "About push notification"
-        }
-        onClick={() => {
-          setSupportModalActive(true);
-        }}
-      />
+
     </div>
   );
 }
