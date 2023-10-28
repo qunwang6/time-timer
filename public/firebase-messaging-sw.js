@@ -7,11 +7,11 @@ importScripts(
 These keys are secured by firebase security rules
 */
 firebase.initializeApp({
-  apiKey: "AIzaSyD21vD66EKhrhmn_tMSYDDGTFmSVgdyk1o",
-  projectId: "time-timer-2dfc2",
-  storageBucket: "time-timer-2dfc2.appspot.com",
-  messagingSenderId: "967984437557",
-  appId: "1:967984437557:web:d995fb425e91b470d4547c",
+  apiKey: "AIzaSyDA1FAe9_b6ts2uPDMxUtlxHCuWGmH75L0",
+  projectId: "timer-ce84d",
+  storageBucket: "timer-ce84d.appspot.com",
+  messagingSenderId: "309616404237",
+  appId: "1:309616404237:web:6888844716e7c6e294b244",
 });
 
 const messaging = firebase.messaging();
