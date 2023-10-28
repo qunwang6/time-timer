@@ -211,18 +211,7 @@ export default function FixedMenu() {
 
           <div style={{ height: "24px" }}></div>
         </div>
-        <div className="section">
-          <OpenLinkItem
-            icon={<MdOpenInNew />}
-            text="Time Timer"
-            href="https://www.timetimer.com"
-          />
-          <OpenLinkItem
-            icon={<BsGithub />}
-            text="Github"
-            href="https://github.com/fecapark/time-timer"
-          />
-        </div>
+
       </MainMenuBar>
     </Container>
   );
