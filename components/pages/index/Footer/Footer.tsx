@@ -65,7 +65,7 @@ export default function Footer() {
               onClick={onTimerStartClick}
             />
           ) : (
- 
+            <span></span>
           )
         ) : null}
       </Container>
