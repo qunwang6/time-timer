@@ -41,8 +41,7 @@ export default function Intro() {
   return isIntroTimeouted && mediaSetted ? null : (
     <IntroContainer ref={introRef} hide={hideWhole}>
       <Logo hide={hideLogo} ref={logoRef}>
-        <div className="word">Time</div>
-        <div className="word bottom">Timer</div>
+        
       </Logo>
     </IntroContainer>
   );
