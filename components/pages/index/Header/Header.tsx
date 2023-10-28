@@ -52,8 +52,7 @@ export default function Header() {
           </IconContainer>
         ) : null}
         <div className="logo">
-          <div className="left word">Time</div>
-          <div className="right word">Timer</div>
+          
         </div>
         {isHideTimer ? (
           <div className="dummy">
