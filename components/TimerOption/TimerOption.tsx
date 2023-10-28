@@ -14,7 +14,7 @@ export default function TimerOption() {
   return (
     <Container triggerHide={isClockPointerDown || isTimingNow}>
       <AlarmSwitch />
-      <NotificationSwitch />
+
     </Container>
   );
 }
