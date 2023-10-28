@@ -69,5 +69,7 @@ export default function NotificationSwitch() {
     pushSendWrapper();
   }, [isTimingNow, isEmptyClockDegree]);
 
+  return (
 
+  );
 }
