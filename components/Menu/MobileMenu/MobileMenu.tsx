@@ -69,11 +69,7 @@ export default function MobileMenu() {
         <div className="content">{contents[menuContent].content}</div>
         {menuContent === "main" ? (
           <div className="footer">
-            <span>
-              Copyright &copy; {new Date().getFullYear()} Sanghyeok Park.
-              <br />
-              All rights reserved.
-            </span>
+
           </div>
         ) : null}
       </MenuContentContainer>

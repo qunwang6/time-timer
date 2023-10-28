@@ -13,10 +13,7 @@ export default function Footer() {
         <div className="word">Time</div>
         <div className="word bottom">Timer</div>
       </Logo>
-      <span className="copyright">
-        Copyright &copy; {new Date().getFullYear()} Sanghyeok Park. All rights
-        reserved.
-      </span>
+
       <div className="links">
         <a
           href="https://github.com/fecapark/time-timer"
