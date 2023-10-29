@@ -28,16 +28,12 @@ export default function useAudio(
 
   const getPermission = useCallback(
     ({ autoplayWhenAccepted = false }: IPermissionOption = {}) => {
-      alert("audio");
 
       if (!audio) return;
       if (isPlayable) return;
       if (!src || src === "") return;
 
       audio.onloadeddata = () => {
-        //
-        audio.autoplay = true;
-        
 
         audio.play();
       };
@@ -60,12 +56,15 @@ export default function useAudio(
 
   const play = useCallback(
     ({ replay = false }: IPlayOption = {}) => {
-      alert("audio2");
+      audio.autoplay = true;
       if (!audio) return;
+      alert("audio2");
       if (!isPlayable) return;
 
       if (replay) audio.currentTime = 0;
       audio.play();
+
+      alert("audio3");
     },
     [audio, isPlayable]
   );
