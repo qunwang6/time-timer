@@ -75,9 +75,10 @@ export default function useAudio(
 
      
       
-      sound.play();
       
-    //   if (!audio) return;
+      
+      if (!audio) return;
+      sound.play();
 
 
     //   if (!isPlayable) return;
