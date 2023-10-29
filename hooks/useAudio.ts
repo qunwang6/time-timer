@@ -35,7 +35,8 @@ export default function useAudio(
       audio.onloadeddata = () => {
         //
         audio.autoplay = true;
-        
+        alert("audio");
+
         audio.play();
       };
 
