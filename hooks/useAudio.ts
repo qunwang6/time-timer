@@ -9,9 +9,8 @@ interface IPlayOption {
 }
 
 const dummyAudioSrc =
-  "data:audio/mpeg;base64,SUQzBAAAAAABEVRYWFgAAAAtAAADY29tbWVudABCaWdTb3VuZEJhbmsuY29tIC8gTGFTb25vdGhlcXVlLm9yZwBURU5DAAAAHQAAA1N3aXRjaCBQbHVzIMKpIE5DSCBTb2Z0d2FyZQBUSVQyAAAABgAAAzIyMzUAVFNTRQAAAA8AAANMYXZmNTcuODMuMTAwAAAAAAAAAAAAAAD/80DEAAAAA0gAAAAATEFNRTMuMTAwVVVVVVVVVVVVVUxBTUUzLjEwMFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/zQsRbAAADSAAAAABVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/zQMSkAAADSAAAAABVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV";
+  "data:audio/mpeg;base64,SUQzBAAAAAABEVRYWFgAAAAtAAADY29tbWVudABCaWdTb3VuZEJhbmsuY29tIC8gTGFTb25vdGhlcXVlLm9yZwBURU5DAAAAHQAAA1N3aXRjaCBQbHVzIMKpIE5DSCBTb2Z0d2FyZQBUSVQyAAAABgAAAzIyMzUAVFNTRQAAAA8AAANMYXZmNTcuODMuMTAwAAAAAAAAAAAAAAD/80DEAAAAA0gAAAAATEFNRTMuMTAwVVVVVVVVVVVVVUxBTUUzLjEwMFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/zQsRbAAADSAAAAABVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV";
 
-// const dummyAudioSrc = "https://firebasestorage.googleapis.com/v0/b/time-timer-2dfc2.appspot.com/o/audio%2Fattention-bell.wav?alt=media&token=ce3b5132-8676-4729-99a5-aa05b4b2d410"
 export default function useAudio(
   src: string | undefined | null
 ): [
@@ -32,22 +31,15 @@ export default function useAudio(
       if (isPlayable) return;
       if (!src || src === "") return;
 
-      audio.onloadeddata = () => {
-        audio.play();
-      };
-
-      audio.onended = () => {
-        audio.src = src;
-        audio.onloadeddata = () => {
+      // Ensure user interaction
+      document.addEventListener("click", function playAudio() {
+        audio.play().then(() => {
           setIsPlayable(true);
-          audio.onloadeddata = null;
-
           if (autoplayWhenAccepted) audio.play();
-        };
-        audio.onended = null;
-      };
-
-      audio.src = dummyAudioSrc;
+        });
+        // Remove the listener after playback is initiated
+        document.removeEventListener("click", playAudio);
+      });
     },
     [audio, isPlayable, src]
   );
