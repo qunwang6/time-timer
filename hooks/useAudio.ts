@@ -57,15 +57,21 @@ export default function useAudio(
 
   const play = useCallback(
     ({ replay = false }: IPlayOption = {}) => {
+
+      var sound = new Howl({
+        src: dummyAudioSrc
+      });
       
-      if (!audio) return;
+      sound.play();
+      
+    //   if (!audio) return;
 
 
-      if (!isPlayable) return;
-    //error
-      if (replay) audio.currentTime = 0;
+    //   if (!isPlayable) return;
+    // //error
+    //   if (replay) audio.currentTime = 0;
       
-      audio.play();
+    //   audio.play();
 
 
     },
