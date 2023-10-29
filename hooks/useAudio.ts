@@ -60,7 +60,7 @@ export default function useAudio(
       if (!audio) return;
 
 
-      // if (!isPlayable) return;
+      if (!isPlayable) return;
     //error
       if (replay) audio.currentTime = 0;
       

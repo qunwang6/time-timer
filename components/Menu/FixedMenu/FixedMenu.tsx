@@ -174,13 +174,7 @@ export default function FixedMenu() {
       </Slider>
       <MainMenuBar>
         <div className="section">
-          <SectionLinkItem
-            href="/records"
-            icon={<MdAllInbox />}
-            text={language === "kor" ? "기록" : "Records"}
-          />
 
-          <div style={{ height: "24px" }}></div>
 
           <SectionItem
             defaultIcon={<IoMdTime />}
