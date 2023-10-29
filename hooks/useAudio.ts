@@ -20,7 +20,7 @@ const dummyAudioSrc =
 const sound = new Howl({
   src: ['attention-bell.wav'],
   autoplay: true,
-  loop: true,
+  loop: false,
   volume: 0.5,
   onend: function() {
     console.log('Finished!');
