@@ -44,7 +44,7 @@ export default function useAudio(
 
   const getPermission = useCallback(
     ({ autoplayWhenAccepted = false }: IPermissionOption = {}) => {
-
+      console.log('1');
       if (!audio) return;
       if (isPlayable) return;
       if (!src || src === "") return;
@@ -73,7 +73,7 @@ export default function useAudio(
   const play = useCallback(
     ({ replay = false }: IPlayOption = {}) => {
 
-     
+      console.log('2');
       
       
       
@@ -81,7 +81,8 @@ export default function useAudio(
       sound.play();
 
 
-    //   if (!isPlayable) return;
+      if (!isPlayable) return;
+      console.log('3');
     // //error
     //   if (replay) audio.currentTime = 0;
       
