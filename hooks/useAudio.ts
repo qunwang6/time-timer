@@ -58,7 +58,7 @@ export default function useAudio(
     ({ replay = false }: IPlayOption = {}) => {
       
       if (!audio) return;
-
+      alert("audio2");
       if (!isPlayable) return;
 
       if (replay) audio.currentTime = 0;
