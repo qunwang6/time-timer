@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 // import {Howl, Howler} from "howler";
-// const {Howl, Howler} = require('howler');
+const {Howl, Howler} = require('howler');
 
 interface IPermissionOption {
   autoplayWhenAccepted?: boolean;
@@ -21,7 +21,10 @@ const sound = new Howl({
   src: ['attention-bell.wav'],
   autoplay: true,
   loop: true,
-  volume: 0.5
+  volume: 0.5,
+  onend: function() {
+    console.log('Finished!');
+  }
 });
 
 
