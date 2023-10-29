@@ -21,10 +21,7 @@ const sound = new Howl({
   src: ['attention-bell.wav'],
   autoplay: true,
   loop: true,
-  volume: 0.5,
-  onend: function() {
-    console.log('Finished!');
-  }
+  volume: 0.5
 });
 
 
