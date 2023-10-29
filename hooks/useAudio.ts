@@ -56,12 +56,13 @@ export default function useAudio(
 
   const play = useCallback(
     ({ replay = false }: IPlayOption = {}) => {
-      audio.autoplay = true;
+      
       if (!audio) return;
-      alert("audio2");
+
       if (!isPlayable) return;
 
       if (replay) audio.currentTime = 0;
+      audio.autoplay = true;
       audio.play();
 
       alert("audio3");
