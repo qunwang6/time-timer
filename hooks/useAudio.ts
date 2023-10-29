@@ -19,7 +19,7 @@ const dummyAudioSrc =
 // });
 const sound = new Howl({
   src: ['attention-bell.wav'],
-  autoplay: true,
+  autoplay: false,
   loop: false,
   volume: 0.5,
   onend: function() {
@@ -73,16 +73,16 @@ export default function useAudio(
   const play = useCallback(
     ({ replay = false }: IPlayOption = {}) => {
 
-      console.log('2');
-      
-      
-      
-      if (!audio) return;
+ 
       sound.play();
+      
+      
+      // if (!audio) return;
+      
 
 
-      if (!isPlayable) return;
-      console.log('3');
+      // if (!isPlayable) return;
+ 
     // //error
     //   if (replay) audio.currentTime = 0;
       
