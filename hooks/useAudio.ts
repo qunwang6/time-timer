@@ -23,7 +23,7 @@ const sound = new Howl({
   loop: false,
   volume: 0.5,
   onend: function() {
-    console.log('Finished!');
+    // console.log('Finished!');
   }
 });
 
@@ -44,7 +44,7 @@ export default function useAudio(
 
   const getPermission = useCallback(
     ({ autoplayWhenAccepted = false }: IPermissionOption = {}) => {
-      console.log('1');
+      // console.log('1');
       if (!audio) return;
       if (isPlayable) return;
       if (!src || src === "") return;
