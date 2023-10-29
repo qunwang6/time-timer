@@ -100,11 +100,7 @@ export default function MainMenuContent({
 
   return (
     <div css={FadeFromLeftAnimationCSS}>
-      <RouterItem
-        text={language === "kor" ? "기록" : "Records"}
-        href="/records"
-      />
-      <div style={{ margin: "24px 0" }} />
+
 
       <MenuContentLinker
         content={language === "kor" ? "시간" : "Time"}
