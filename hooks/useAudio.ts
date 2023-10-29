@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
-import {Howl, Howler} from "howler";
+// import {Howl, Howler} from "howler";
+const {Howl, Howler} = require('howler');
 
 interface IPermissionOption {
   autoplayWhenAccepted?: boolean;
