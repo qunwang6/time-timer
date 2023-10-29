@@ -77,14 +77,14 @@ export default function useAudio(
       
       sound.play();
       
-      if (!audio) return;
+    //   if (!audio) return;
 
 
-      if (!isPlayable) return;
-    //error
-      if (replay) audio.currentTime = 0;
+    //   if (!isPlayable) return;
+    // //error
+    //   if (replay) audio.currentTime = 0;
       
-      audio.play();
+    //   audio.play();
 
 
     },
