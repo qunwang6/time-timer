@@ -16,7 +16,6 @@ const dummyAudioSrc =
 
 const sound = new Howl({
   src: dummyAudioSrc,
-  volume: 1.0, // Adjust the volume as needed (0.0 to 1.0)
 });
 
 
@@ -68,16 +67,16 @@ export default function useAudio(
 
      
       
-      sound.play();
+      // sound.play();
       
-    //   if (!audio) return;
+      if (!audio) return;
 
 
-    //   if (!isPlayable) return;
-    // //error
-    //   if (replay) audio.currentTime = 0;
+      if (!isPlayable) return;
+    //error
+      if (replay) audio.currentTime = 0;
       
-    //   audio.play();
+      audio.play();
 
 
     },
